@@ -1,0 +1,67 @@
+.App {
+  background-color: #373737;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenedor_botones {
+  width: 100%;
+  display: flex;
+}
+
+.contenedor_item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  color: aliceblue;
+  font-size: 3.5vmin;
+  padding: 10px;
+  border-radius: 0 0 30px 30px;
+}
+
+.contenedor_stats {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: aliceblue;
+  font-size: 4.5vmin;
+  padding: 20px;
+  background-color: #373737;
+}
+
+.boton {
+  height: 50px;
+  width: 50%;
+  border: none;
+  color: aliceblue;
+  font-size: 3vmin;
+  cursor: pointer;
+}
+
+.rojo {
+  background-color: rgba(200, 19, 13, 0.984);
+}
+.verde {
+  background-color: rgba(13, 200, 82, 0.984);
+}
+
+.id {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+}
+
+.id2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+}

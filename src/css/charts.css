@@ -1,0 +1,31 @@
+.contenedor_stats_charts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.pil {
+  background-image: linear-gradient(to right, #f19494 10%, #fff 0%);
+  padding: 0px 100px;
+  border-radius: 20px;
+  height: 15px;
+  width: 100%;
+}
+
+.contenedor_stats_charts p {
+  text-align: start;
+  font-size: 2.5vmin;
+  margin: 0%;
+}
+
+.contenedor_stats_charts section {
+}
+
+@media screen and (max-width: 550px) {
+  .contenedor_stats_charts {
+    gap: 5px;
+    margin-top: 20px;
+  }
+}
