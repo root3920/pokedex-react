@@ -1,12 +1,12 @@
-/* definimos los estilos iniciales de la página */
-.page {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-/* cuando se desencadena la animación, hacemos que la página salga hacia arriba y desaparezca */
-.page.animate {
-  opacity: 0;
-  transform: translateY(-50%);
+.App {
+  background-color: #373737;
+  max-width: 100%;
+  height: 90vh;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  overflow-y: scroll;
 }
