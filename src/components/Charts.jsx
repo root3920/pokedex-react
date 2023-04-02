@@ -2,6 +2,7 @@ import "../css/charts.css";
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/context";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Charts = () => {
   const { pokemons, color } = useContext(ThemeContext);
@@ -46,25 +47,53 @@ const Charts = () => {
     rate: pokemons.stats[5].base_stat,
   };
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerDirection: -1,
+      },
+    },
+  };
+
   return (
-    <div className="contenedor_stats_charts">
+    <motion.div
+      className="contenedor_stats_charts"
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
       <section>
         <p>{HP_STAT_POKEMON.name}: </p>
-        <Pil primary={HP_STAT_POKEMON.rate} color={color}></Pil>
+        <Pil primary={HP_STAT_POKEMON.rate} color={color}>
+          {HP_STAT_POKEMON.rate}/300
+        </Pil>
         <p>{ATTACK_STAT_POKEMON.name}: </p>
-        <Pil primary={ATTACK_STAT_POKEMON.rate} color={color}></Pil>
+        <Pil primary={ATTACK_STAT_POKEMON.rate} color={color}>
+          {HP_STAT_POKEMON.rate}/300
+        </Pil>
         <p>{DEFENSE_STAT_POKEMON.name}: </p>
-        <Pil primary={DEFENSE_STAT_POKEMON.rate} color={color}></Pil>
+        <Pil primary={DEFENSE_STAT_POKEMON.rate} color={color}>
+          {HP_STAT_POKEMON.rate}/300
+        </Pil>
       </section>
       <section>
         <p>{ESATTACK_STAT_POKEMON.name}: </p>
-        <Pil primary={ESATTACK_STAT_POKEMON.rate} color={color}></Pil>
+        <Pil primary={ESATTACK_STAT_POKEMON.rate} color={color}>
+          {HP_STAT_POKEMON.rate}/300
+        </Pil>
         <p>{ESDEFE_STAT_POKEMON.name}: </p>
-        <Pil primary={ESDEFE_STAT_POKEMON.rate} color={color}></Pil>
+        <Pil primary={ESDEFE_STAT_POKEMON.rate} color={color}>
+          {HP_STAT_POKEMON.rate}/300
+        </Pil>
         <p>{SPEED_STAT_POKEMON.name}: </p>
-        <Pil primary={SPEED_STAT_POKEMON.rate} color={color}></Pil>
+        <Pil primary={SPEED_STAT_POKEMON.rate} color={color}>
+          {HP_STAT_POKEMON.rate}/300
+        </Pil>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
@@ -76,22 +105,14 @@ const Pil = styled.div`
         }%, #fff 0%)`
       : ""};
   padding: 0px 100px;
-  margin: 5px 0px;
+  margin: 0px 0px;
   border-radius: 20px;
-  height: 15px;
+  height: auto;
   width: 100%;
-
-  &::before {
-    content: ${(props) => (props.primary ? `"${props.primary} / 300"` : "")};
-    font-size: 1.8vmin;
-    position: relative;
-    top: -18px;
-    right: 90px;
-    color: black;
-
-    @media screen and (max-width: 550px) {
-      top: -14px;
-  }
+  font-size: 2.5vmin;
+  color: black;
+  font-size: 2vmin;
 `;
 
 export default Charts;
+// content: ${(props) => (props.primary ? `"${props.primary} / 300"` : "")};
