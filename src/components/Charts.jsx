@@ -72,25 +72,25 @@ const Charts = () => {
         </Pil>
         <p>{ATTACK_STAT_POKEMON.name}: </p>
         <Pil primary={ATTACK_STAT_POKEMON.rate} color={color}>
-          {HP_STAT_POKEMON.rate}/300
+          {ATTACK_STAT_POKEMON.rate}/300
         </Pil>
         <p>{DEFENSE_STAT_POKEMON.name}: </p>
         <Pil primary={DEFENSE_STAT_POKEMON.rate} color={color}>
-          {HP_STAT_POKEMON.rate}/300
+          {DEFENSE_STAT_POKEMON.rate}/300
         </Pil>
       </section>
       <section>
         <p>{ESATTACK_STAT_POKEMON.name}: </p>
         <Pil primary={ESATTACK_STAT_POKEMON.rate} color={color}>
-          {HP_STAT_POKEMON.rate}/300
+          {ESATTACK_STAT_POKEMON.rate}/300
         </Pil>
         <p>{ESDEFE_STAT_POKEMON.name}: </p>
         <Pil primary={ESDEFE_STAT_POKEMON.rate} color={color}>
-          {HP_STAT_POKEMON.rate}/300
+          {ESDEFE_STAT_POKEMON.rate}/300
         </Pil>
         <p>{SPEED_STAT_POKEMON.name}: </p>
         <Pil primary={SPEED_STAT_POKEMON.rate} color={color}>
-          {HP_STAT_POKEMON.rate}/300
+          {SPEED_STAT_POKEMON.rate}/300
         </Pil>
       </section>
     </motion.div>
