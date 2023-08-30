@@ -20,13 +20,12 @@ const getRandomColor = () => {
   ];
 
   /* Generar 5 colores aleatorios */
-  let randomColors = [];
-  for (let i = 0; i < 5; i++) {
-    let randomIndex = Math.floor(Math.random() * colors.length);
-    let randomColor = colors[randomIndex];
-    randomColors.push(randomColor);
-    return randomColor;
-  }
-};
+
+
+  let randomIndex = Math.floor(Math.random() * colors.length);
+  let randomColor = colors[randomIndex];
+  return randomColor;
+}
+
 
 export default getRandomColor;

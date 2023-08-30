@@ -16,7 +16,7 @@ const ContenedorItem = () => {
       <p className="id">#{pokemons.id}</p>
 
       <p className="id2">
-        <CgPokemon size={40} style={{ marginBottom: "-10px" }} />
+        <CgPokemon size={40} style={{ marginBottom: "-14px" }} />
         Pokedex
       </p>
     </div>

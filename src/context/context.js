@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 
 const Provedor = ({ children }) => {
   const [num, setNum] = useState(Math.floor(Math.random() * 1008) + 1);
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState({});
   const [color, setColor] = useState("#0ac1d0");
 
   //Funcion para elegir un pokemon random
@@ -23,7 +23,6 @@ const Provedor = ({ children }) => {
     fetch(POKE_API_POKEMON_URL)
       .then((response) => response.json())
       .then((pokemones) => setPokemons(pokemones));
-    console.log(pokemons);
   }, [num]);
 
   const typePokemons1 = () => {
@@ -40,9 +39,6 @@ const Provedor = ({ children }) => {
 
         case "poison":
           return <p className="poison">{pokemons.types[0].type.name}</p>;
-
-        case "psychic":
-          return <p className="psychic">{pokemons.types[0].type.name}</p>;
 
         case "psychic":
           return <p className="psychic">{pokemons.types[0].type.name}</p>;
@@ -90,9 +86,6 @@ const Provedor = ({ children }) => {
 
         case "poison":
           return <p className="poison">{pokemons.types[1].type.name}</p>;
-
-        case "psychic":
-          return <p className="psychic">{pokemons.types[1].type.name}</p>;
 
         case "psychic":
           return <p className="psychic">{pokemons.types[1].type.name}</p>;

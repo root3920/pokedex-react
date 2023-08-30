@@ -105,7 +105,7 @@ const Pil = styled.div`
         }%, #fff 0%)`
       : ""};
   padding: 0px 100px;
-  margin: 0px 0px;
+  margin: 10px 0px;
   border-radius: 20px;
   height: auto;
   width: 100%;
